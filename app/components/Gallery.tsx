@@ -77,12 +77,7 @@ export default function TroscanGallery() {
     <div className="bg-[#faf5f0]">
 
       {/* Header - KEPT */}
-      <div className="h-screen flex items-center justify-center">
-        <div className="text-center px-20">
-          <h1 className="text-6xl md:text-8xl font-light text-[#8b4b32] mb-4">Troscán</h1>
-          <p className="text-xl text-[#8b4b32]/70">Scroll to explore our work</p>
-        </div>
-      </div>
+   
 
       {/* Gallery */}
       <section ref={sectionRef} className="relative h-[200vh] bg-[#faf5f0]">

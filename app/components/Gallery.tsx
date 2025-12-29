@@ -30,14 +30,20 @@ export default function TroscanGallery() {
       const yMultiplier = isMobile ? 0.3 : isTablet ? 0.65 : 1;
       const scaleExpanded = isMobile ? 0.85 : isTablet ? 1.0 : 1.1;
       
-      // Initial stacked state
+      // Initial stacked state with visible spacing
       gsap.set('.gallery-img', {
-        x: 0,
-        y: 0,
         scale: 0.7,
         opacity: 1,
         rotation: 0,
       });
+
+      // Add more spacing between stacked images for visibility
+      gsap.set('.img-1', { x: -80, y: -60 });
+      gsap.set('.img-2', { x: 60, y: -40 });
+      gsap.set('.img-3', { x: -40, y: -20 });
+      gsap.set('.img-4', { x: 70, y: 20 });
+      gsap.set('.img-5', { x: -60, y: 40 });
+      gsap.set('.img-6', { x: 50, y: 60 });
 
       gsap.set('.gallery-text', { opacity: 0 });
 
@@ -93,37 +99,37 @@ export default function TroscanGallery() {
     };
   }, []);
 
-  // Images with increased mobile sizes
+  // Images with mobile sizes increased by another 5%
   const images = [
     { 
       src: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80', 
       class: 'img-1', 
-      size: 'md:w-[196px] md:h-[266px] w-[110px] h-[150px]'
+      size: 'md:w-[196px] md:h-[266px] w-[122px] h-[166px]'
     },
     { 
       src: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80', 
       class: 'img-2', 
-      size: 'md:w-[252px] md:h-[168px] w-[140px] h-[95px]'
+      size: 'md:w-[252px] md:h-[168px] w-[154px] h-[105px]'
     },
     { 
       src: 'https://framerusercontent.com/images/rZjzFX7RCkgqdY9yyhbi4hs.jpeg?scale-down-to=1024', 
       class: 'img-3', 
-      size: 'md:w-[210px] md:h-[252px] w-[120px] h-[140px]'
+      size: 'md:w-[210px] md:h-[252px] w-[132px] h-[154px]'
     },
     { 
       src: 'https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?w=800&q=80', 
       class: 'img-4', 
-      size: 'md:w-[224px] md:h-[168px] w-[125px] h-[95px]'
+      size: 'md:w-[224px] md:h-[168px] w-[138px] h-[105px]'
     },
     { 
       src: 'https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?w=800&q=80', 
       class: 'img-5', 
-      size: 'md:w-[196px] md:h-[140px] w-[110px] h-[80px]'
+      size: 'md:w-[196px] md:h-[140px] w-[122px] h-[88px]'
     },
     { 
       src: 'https://images.unsplash.com/photo-1615876234886-fd9a39fda97f?w=800&q=80', 
       class: 'img-6', 
-      size: 'md:w-[238px] md:h-[154px] w-[130px] h-[85px]'
+      size: 'md:w-[238px] md:h-[154px] w-[144px] h-[93px]'
     },
   ];
 
